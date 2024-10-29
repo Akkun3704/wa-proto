@@ -13372,6 +13372,9 @@ export namespace proto {
 
         /** Message associatedChildMessage */
         associatedChildMessage?: (proto.Message.IFutureProofMessage|null);
+
+        /** Message groupStatusMentionMessage */
+        groupStatusMentionMessage?: (proto.Message.IFutureProofMessage|null);
     }
 
     /** Represents a Message. */
@@ -13610,6 +13613,9 @@ export namespace proto {
 
         /** Message associatedChildMessage. */
         public associatedChildMessage?: (proto.Message.IFutureProofMessage|null);
+
+        /** Message groupStatusMentionMessage. */
+        public groupStatusMentionMessage?: (proto.Message.IFutureProofMessage|null);
 
         /**
          * Creates a new Message instance using the specified properties.
