@@ -13696,6 +13696,9 @@ export namespace proto {
 
         /** Message pollCreationMessageV5 */
         pollCreationMessageV5?: (proto.Message.IFutureProofMessage|null);
+
+        /** Message statusAddYours */
+        statusAddYours?: (proto.Message.IFutureProofMessage|null);
     }
 
     /** Represents a Message. */
@@ -13940,6 +13943,9 @@ export namespace proto {
 
         /** Message pollCreationMessageV5. */
         public pollCreationMessageV5?: (proto.Message.IFutureProofMessage|null);
+
+        /** Message statusAddYours. */
+        public statusAddYours?: (proto.Message.IFutureProofMessage|null);
 
         /**
          * Creates a new Message instance using the specified properties.
@@ -32094,7 +32100,9 @@ export namespace proto {
             SMBI = 3,
             WEB = 4,
             UWP = 5,
-            DARWIN = 6
+            DARWIN = 6,
+            IPAD = 7,
+            WEAROS = 8
         }
     }
 
