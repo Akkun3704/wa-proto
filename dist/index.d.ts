@@ -25888,6 +25888,7 @@ export namespace proto {
 
         /** PollMediaType enum. */
         enum PollMediaType {
+            UNKNOWN = 0,
             TEXT = 1,
             IMAGE = 2
         }
