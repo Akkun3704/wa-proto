@@ -13849,6 +13849,9 @@ export namespace proto {
 
         /** Message statusAddYours */
         statusAddYours?: (proto.Message.IFutureProofMessage|null);
+
+        /** Message groupStatusMessage */
+        groupStatusMessage?: (proto.Message.IFutureProofMessage|null);
     }
 
     /** Represents a Message. */
@@ -14096,6 +14099,9 @@ export namespace proto {
 
         /** Message statusAddYours. */
         public statusAddYours?: (proto.Message.IFutureProofMessage|null);
+
+        /** Message groupStatusMessage. */
+        public groupStatusMessage?: (proto.Message.IFutureProofMessage|null);
 
         /**
          * Creates a new Message instance using the specified properties.
