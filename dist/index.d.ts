@@ -12853,6 +12853,115 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    /** Properties of a LIDMigrationMapping. */
+    interface ILIDMigrationMapping {
+
+        /** LIDMigrationMapping pn */
+        pn: (number|Long);
+
+        /** LIDMigrationMapping assignedLid */
+        assignedLid: (number|Long);
+
+        /** LIDMigrationMapping latestLid */
+        latestLid?: (number|Long|null);
+    }
+
+    /** Represents a LIDMigrationMapping. */
+    class LIDMigrationMapping implements ILIDMigrationMapping {
+
+        /**
+         * Constructs a new LIDMigrationMapping.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: proto.ILIDMigrationMapping);
+
+        /** LIDMigrationMapping pn. */
+        public pn: (number|Long);
+
+        /** LIDMigrationMapping assignedLid. */
+        public assignedLid: (number|Long);
+
+        /** LIDMigrationMapping latestLid. */
+        public latestLid?: (number|Long|null);
+
+        /**
+         * Creates a new LIDMigrationMapping instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns LIDMigrationMapping instance
+         */
+        public static create(properties?: proto.ILIDMigrationMapping): proto.LIDMigrationMapping;
+
+        /**
+         * Encodes the specified LIDMigrationMapping message. Does not implicitly {@link proto.LIDMigrationMapping.verify|verify} messages.
+         * @param message LIDMigrationMapping message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: proto.ILIDMigrationMapping, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified LIDMigrationMapping message, length delimited. Does not implicitly {@link proto.LIDMigrationMapping.verify|verify} messages.
+         * @param message LIDMigrationMapping message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: proto.ILIDMigrationMapping, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a LIDMigrationMapping message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns LIDMigrationMapping
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.LIDMigrationMapping;
+
+        /**
+         * Decodes a LIDMigrationMapping message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns LIDMigrationMapping
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.LIDMigrationMapping;
+
+        /**
+         * Verifies a LIDMigrationMapping message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a LIDMigrationMapping message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns LIDMigrationMapping
+         */
+        public static fromObject(object: { [k: string]: any }): proto.LIDMigrationMapping;
+
+        /**
+         * Creates a plain object from a LIDMigrationMapping message. Also converts values to other types if specified.
+         * @param message LIDMigrationMapping
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: proto.LIDMigrationMapping, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this LIDMigrationMapping to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for LIDMigrationMapping
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of a LIDMigrationMappingSyncMessage. */
     interface ILIDMigrationMappingSyncMessage {
 
@@ -12944,6 +13053,103 @@ export namespace proto {
 
         /**
          * Gets the default type url for LIDMigrationMappingSyncMessage
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a LIDMigrationMappingSyncPayload. */
+    interface ILIDMigrationMappingSyncPayload {
+
+        /** LIDMigrationMappingSyncPayload pnToLidMappings */
+        pnToLidMappings?: (proto.ILIDMigrationMapping[]|null);
+    }
+
+    /** Represents a LIDMigrationMappingSyncPayload. */
+    class LIDMigrationMappingSyncPayload implements ILIDMigrationMappingSyncPayload {
+
+        /**
+         * Constructs a new LIDMigrationMappingSyncPayload.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: proto.ILIDMigrationMappingSyncPayload);
+
+        /** LIDMigrationMappingSyncPayload pnToLidMappings. */
+        public pnToLidMappings: proto.ILIDMigrationMapping[];
+
+        /**
+         * Creates a new LIDMigrationMappingSyncPayload instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns LIDMigrationMappingSyncPayload instance
+         */
+        public static create(properties?: proto.ILIDMigrationMappingSyncPayload): proto.LIDMigrationMappingSyncPayload;
+
+        /**
+         * Encodes the specified LIDMigrationMappingSyncPayload message. Does not implicitly {@link proto.LIDMigrationMappingSyncPayload.verify|verify} messages.
+         * @param message LIDMigrationMappingSyncPayload message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: proto.ILIDMigrationMappingSyncPayload, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified LIDMigrationMappingSyncPayload message, length delimited. Does not implicitly {@link proto.LIDMigrationMappingSyncPayload.verify|verify} messages.
+         * @param message LIDMigrationMappingSyncPayload message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: proto.ILIDMigrationMappingSyncPayload, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a LIDMigrationMappingSyncPayload message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns LIDMigrationMappingSyncPayload
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.LIDMigrationMappingSyncPayload;
+
+        /**
+         * Decodes a LIDMigrationMappingSyncPayload message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns LIDMigrationMappingSyncPayload
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.LIDMigrationMappingSyncPayload;
+
+        /**
+         * Verifies a LIDMigrationMappingSyncPayload message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a LIDMigrationMappingSyncPayload message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns LIDMigrationMappingSyncPayload
+         */
+        public static fromObject(object: { [k: string]: any }): proto.LIDMigrationMappingSyncPayload;
+
+        /**
+         * Creates a plain object from a LIDMigrationMappingSyncPayload message. Also converts values to other types if specified.
+         * @param message LIDMigrationMappingSyncPayload
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: proto.LIDMigrationMappingSyncPayload, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this LIDMigrationMappingSyncPayload to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for LIDMigrationMappingSyncPayload
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
