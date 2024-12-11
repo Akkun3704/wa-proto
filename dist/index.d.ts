@@ -25959,6 +25959,13 @@ export namespace proto {
             }
         }
 
+        /** PollContentType enum. */
+        enum PollContentType {
+            UNKNOWN = 0,
+            TEXT = 1,
+            IMAGE = 2
+        }
+
         /** Properties of a PollCreationMessage. */
         interface IPollCreationMessage {
 
@@ -25978,7 +25985,7 @@ export namespace proto {
             contextInfo?: (proto.IContextInfo|null);
 
             /** PollCreationMessage pollMediaType */
-            pollMediaType?: (proto.Message.PollMediaType|null);
+            pollMediaType?: (proto.Message.PollContentType|null);
 
             /** PollCreationMessage pollType */
             pollType?: (proto.Message.PollCreationMessage.PollType|null);
@@ -26012,7 +26019,7 @@ export namespace proto {
             public contextInfo?: (proto.IContextInfo|null);
 
             /** PollCreationMessage pollMediaType. */
-            public pollMediaType?: (proto.Message.PollMediaType|null);
+            public pollMediaType?: (proto.Message.PollContentType|null);
 
             /** PollCreationMessage pollType. */
             public pollType?: (proto.Message.PollCreationMessage.PollType|null);
@@ -26311,13 +26318,6 @@ export namespace proto {
              * @returns The default type url
              */
             public static getTypeUrl(typeUrlPrefix?: string): string;
-        }
-
-        /** PollMediaType enum. */
-        enum PollMediaType {
-            UNKNOWN = 0,
-            TEXT = 1,
-            IMAGE = 2
         }
 
         /** Properties of a PollResultSnapshotMessage. */
