@@ -25984,8 +25984,8 @@ export namespace proto {
             /** PollCreationMessage contextInfo */
             contextInfo?: (proto.IContextInfo|null);
 
-            /** PollCreationMessage pollMediaType */
-            pollMediaType?: (proto.Message.PollContentType|null);
+            /** PollCreationMessage pollContentType */
+            pollContentType?: (proto.Message.PollContentType|null);
 
             /** PollCreationMessage pollType */
             pollType?: (proto.Message.PollCreationMessage.PollType|null);
@@ -26018,8 +26018,8 @@ export namespace proto {
             /** PollCreationMessage contextInfo. */
             public contextInfo?: (proto.IContextInfo|null);
 
-            /** PollCreationMessage pollMediaType. */
-            public pollMediaType?: (proto.Message.PollContentType|null);
+            /** PollCreationMessage pollContentType. */
+            public pollContentType?: (proto.Message.PollContentType|null);
 
             /** PollCreationMessage pollType. */
             public pollType?: (proto.Message.PollCreationMessage.PollType|null);
