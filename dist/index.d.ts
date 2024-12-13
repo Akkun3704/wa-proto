@@ -30938,6 +30938,9 @@ export namespace proto {
         /** MsgOpaqueData isSentCagPollCreation */
         isSentCagPollCreation?: (boolean|null);
 
+        /** MsgOpaqueData pollContentType */
+        pollContentType?: (proto.MsgOpaqueData.PollContentType|null);
+
         /** MsgOpaqueData pollVotesSnapshot */
         pollVotesSnapshot?: (proto.MsgOpaqueData.IPollVotesSnapshot|null);
 
@@ -31058,6 +31061,9 @@ export namespace proto {
 
         /** MsgOpaqueData isSentCagPollCreation. */
         public isSentCagPollCreation?: (boolean|null);
+
+        /** MsgOpaqueData pollContentType. */
+        public pollContentType?: (proto.MsgOpaqueData.PollContentType|null);
 
         /** MsgOpaqueData pollVotesSnapshot. */
         public pollVotesSnapshot?: (proto.MsgOpaqueData.IPollVotesSnapshot|null);
@@ -31309,6 +31315,13 @@ export namespace proto {
              * @returns The default type url
              */
             public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** PollContentType enum. */
+        enum PollContentType {
+            UNKNOWN = 0,
+            TEXT = 1,
+            IMAGE = 2
         }
 
         /** Properties of a PollOption. */
