@@ -2911,6 +2911,9 @@ export namespace proto {
 
         /** BotLinkedAccountsMetadata accounts */
         accounts?: (proto.IBotLinkedAccount[]|null);
+
+        /** BotLinkedAccountsMetadata acAuthTokens */
+        acAuthTokens?: (Uint8Array|null);
     }
 
     /** Represents a BotLinkedAccountsMetadata. */
@@ -2924,6 +2927,9 @@ export namespace proto {
 
         /** BotLinkedAccountsMetadata accounts. */
         public accounts: proto.IBotLinkedAccount[];
+
+        /** BotLinkedAccountsMetadata acAuthTokens. */
+        public acAuthTokens?: (Uint8Array|null);
 
         /**
          * Creates a new BotLinkedAccountsMetadata instance using the specified properties.
