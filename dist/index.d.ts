@@ -48285,6 +48285,9 @@ export namespace proto {
 
         /** WebMessageInfo supportAiCitations */
         supportAiCitations?: (proto.ICitation[]|null);
+
+        /** WebMessageInfo botTargetId */
+        botTargetId?: (string|null);
     }
 
     /** Represents a WebMessageInfo. */
@@ -48478,6 +48481,9 @@ export namespace proto {
 
         /** WebMessageInfo supportAiCitations. */
         public supportAiCitations: proto.ICitation[];
+
+        /** WebMessageInfo botTargetId. */
+        public botTargetId?: (string|null);
 
         /**
          * Creates a new WebMessageInfo instance using the specified properties.
