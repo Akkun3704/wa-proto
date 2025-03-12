@@ -5271,6 +5271,9 @@ export namespace proto {
             /** BotPlanningStepMetadata statusTitle */
             statusTitle?: (string|null);
 
+            /** BotPlanningStepMetadata statusBody */
+            statusBody?: (string|null);
+
             /** BotPlanningStepMetadata sourcesMetadata */
             sourcesMetadata?: (proto.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata[]|null);
 
@@ -5298,6 +5301,9 @@ export namespace proto {
 
             /** BotPlanningStepMetadata statusTitle. */
             public statusTitle?: (string|null);
+
+            /** BotPlanningStepMetadata statusBody. */
+            public statusBody?: (string|null);
 
             /** BotPlanningStepMetadata sourcesMetadata. */
             public sourcesMetadata: proto.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata[];
@@ -5740,7 +5746,7 @@ export namespace proto {
 
             /** BotSearchSourceProvider enum. */
             enum BotSearchSourceProvider {
-                UNKNOWNPROVIDER = 0,
+                UNKNOWN_PROVIDER = 0,
                 OTHER = 1,
                 GOOGLE = 2,
                 BING = 3
@@ -8336,6 +8342,9 @@ export namespace proto {
 
         /** ClientPayload trafficAnonymization */
         trafficAnonymization?: (proto.ClientPayload.TrafficAnonymization|null);
+
+        /** ClientPayload lidDbMigrated */
+        lidDbMigrated?: (boolean|null);
     }
 
     /** Represents a ClientPayload. */
@@ -8430,6 +8439,9 @@ export namespace proto {
 
         /** ClientPayload trafficAnonymization. */
         public trafficAnonymization?: (proto.ClientPayload.TrafficAnonymization|null);
+
+        /** ClientPayload lidDbMigrated. */
+        public lidDbMigrated?: (boolean|null);
 
         /**
          * Creates a new ClientPayload instance using the specified properties.
@@ -17627,6 +17639,9 @@ export namespace proto {
 
         /** Message statusNotificationMessage */
         statusNotificationMessage?: (proto.Message.IStatusNotificationMessage|null);
+
+        /** Message limitSharingMessage */
+        limitSharingMessage?: (proto.Message.IFutureProofMessage|null);
     }
 
     /** Represents a Message. */
@@ -17883,6 +17898,9 @@ export namespace proto {
 
         /** Message statusNotificationMessage. */
         public statusNotificationMessage?: (proto.Message.IStatusNotificationMessage|null);
+
+        /** Message limitSharingMessage. */
+        public limitSharingMessage?: (proto.Message.IFutureProofMessage|null);
 
         /**
          * Creates a new Message instance using the specified properties.
@@ -22004,6 +22022,9 @@ export namespace proto {
 
             /** ExtendedTextMessage faviconMMSMetadata */
             faviconMMSMetadata?: (proto.Message.IMMSThumbnailMetadata|null);
+
+            /** ExtendedTextMessage linkPreviewMetadata */
+            linkPreviewMetadata?: (proto.Message.ExtendedTextMessage.ILinkPreviewMetadata|null);
         }
 
         /** Represents an ExtendedTextMessage. */
@@ -22092,6 +22113,9 @@ export namespace proto {
 
             /** ExtendedTextMessage faviconMMSMetadata. */
             public faviconMMSMetadata?: (proto.Message.IMMSThumbnailMetadata|null);
+
+            /** ExtendedTextMessage linkPreviewMetadata. */
+            public linkPreviewMetadata?: (proto.Message.ExtendedTextMessage.ILinkPreviewMetadata|null);
 
             /**
              * Creates a new ExtendedTextMessage instance using the specified properties.
@@ -22191,6 +22215,103 @@ export namespace proto {
                 PARENT = 1,
                 SUB = 2,
                 DEFAULT_SUB = 3
+            }
+
+            /** Properties of a LinkPreviewMetadata. */
+            interface ILinkPreviewMetadata {
+
+                /** LinkPreviewMetadata paymentLinkMetadata */
+                paymentLinkMetadata?: (proto.Message.IPaymentLinkMetadata|null);
+            }
+
+            /** Represents a LinkPreviewMetadata. */
+            class LinkPreviewMetadata implements ILinkPreviewMetadata {
+
+                /**
+                 * Constructs a new LinkPreviewMetadata.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: proto.Message.ExtendedTextMessage.ILinkPreviewMetadata);
+
+                /** LinkPreviewMetadata paymentLinkMetadata. */
+                public paymentLinkMetadata?: (proto.Message.IPaymentLinkMetadata|null);
+
+                /**
+                 * Creates a new LinkPreviewMetadata instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns LinkPreviewMetadata instance
+                 */
+                public static create(properties?: proto.Message.ExtendedTextMessage.ILinkPreviewMetadata): proto.Message.ExtendedTextMessage.LinkPreviewMetadata;
+
+                /**
+                 * Encodes the specified LinkPreviewMetadata message. Does not implicitly {@link proto.Message.ExtendedTextMessage.LinkPreviewMetadata.verify|verify} messages.
+                 * @param message LinkPreviewMetadata message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: proto.Message.ExtendedTextMessage.ILinkPreviewMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified LinkPreviewMetadata message, length delimited. Does not implicitly {@link proto.Message.ExtendedTextMessage.LinkPreviewMetadata.verify|verify} messages.
+                 * @param message LinkPreviewMetadata message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: proto.Message.ExtendedTextMessage.ILinkPreviewMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a LinkPreviewMetadata message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns LinkPreviewMetadata
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.ExtendedTextMessage.LinkPreviewMetadata;
+
+                /**
+                 * Decodes a LinkPreviewMetadata message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns LinkPreviewMetadata
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.ExtendedTextMessage.LinkPreviewMetadata;
+
+                /**
+                 * Verifies a LinkPreviewMetadata message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a LinkPreviewMetadata message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns LinkPreviewMetadata
+                 */
+                public static fromObject(object: { [k: string]: any }): proto.Message.ExtendedTextMessage.LinkPreviewMetadata;
+
+                /**
+                 * Creates a plain object from a LinkPreviewMetadata message. Also converts values to other types if specified.
+                 * @param message LinkPreviewMetadata
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: proto.Message.ExtendedTextMessage.LinkPreviewMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this LinkPreviewMetadata to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for LinkPreviewMetadata
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
             }
 
             /** PreviewType enum. */
@@ -27493,6 +27614,315 @@ export namespace proto {
                 FBPAY = 1,
                 NOVI = 2,
                 UPI = 3
+            }
+        }
+
+        /** Properties of a PaymentLinkMetadata. */
+        interface IPaymentLinkMetadata {
+
+            /** PaymentLinkMetadata button */
+            button?: (proto.Message.PaymentLinkMetadata.IPaymentLinkButton|null);
+
+            /** PaymentLinkMetadata header */
+            header?: (proto.Message.PaymentLinkMetadata.IPaymentLinkHeader|null);
+        }
+
+        /** Represents a PaymentLinkMetadata. */
+        class PaymentLinkMetadata implements IPaymentLinkMetadata {
+
+            /**
+             * Constructs a new PaymentLinkMetadata.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: proto.Message.IPaymentLinkMetadata);
+
+            /** PaymentLinkMetadata button. */
+            public button?: (proto.Message.PaymentLinkMetadata.IPaymentLinkButton|null);
+
+            /** PaymentLinkMetadata header. */
+            public header?: (proto.Message.PaymentLinkMetadata.IPaymentLinkHeader|null);
+
+            /**
+             * Creates a new PaymentLinkMetadata instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns PaymentLinkMetadata instance
+             */
+            public static create(properties?: proto.Message.IPaymentLinkMetadata): proto.Message.PaymentLinkMetadata;
+
+            /**
+             * Encodes the specified PaymentLinkMetadata message. Does not implicitly {@link proto.Message.PaymentLinkMetadata.verify|verify} messages.
+             * @param message PaymentLinkMetadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: proto.Message.IPaymentLinkMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified PaymentLinkMetadata message, length delimited. Does not implicitly {@link proto.Message.PaymentLinkMetadata.verify|verify} messages.
+             * @param message PaymentLinkMetadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: proto.Message.IPaymentLinkMetadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a PaymentLinkMetadata message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns PaymentLinkMetadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.PaymentLinkMetadata;
+
+            /**
+             * Decodes a PaymentLinkMetadata message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns PaymentLinkMetadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.PaymentLinkMetadata;
+
+            /**
+             * Verifies a PaymentLinkMetadata message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a PaymentLinkMetadata message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns PaymentLinkMetadata
+             */
+            public static fromObject(object: { [k: string]: any }): proto.Message.PaymentLinkMetadata;
+
+            /**
+             * Creates a plain object from a PaymentLinkMetadata message. Also converts values to other types if specified.
+             * @param message PaymentLinkMetadata
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: proto.Message.PaymentLinkMetadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this PaymentLinkMetadata to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for PaymentLinkMetadata
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace PaymentLinkMetadata {
+
+            /** Properties of a PaymentLinkButton. */
+            interface IPaymentLinkButton {
+
+                /** PaymentLinkButton displayText */
+                displayText: string;
+            }
+
+            /** Represents a PaymentLinkButton. */
+            class PaymentLinkButton implements IPaymentLinkButton {
+
+                /**
+                 * Constructs a new PaymentLinkButton.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: proto.Message.PaymentLinkMetadata.IPaymentLinkButton);
+
+                /** PaymentLinkButton displayText. */
+                public displayText: string;
+
+                /**
+                 * Creates a new PaymentLinkButton instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns PaymentLinkButton instance
+                 */
+                public static create(properties?: proto.Message.PaymentLinkMetadata.IPaymentLinkButton): proto.Message.PaymentLinkMetadata.PaymentLinkButton;
+
+                /**
+                 * Encodes the specified PaymentLinkButton message. Does not implicitly {@link proto.Message.PaymentLinkMetadata.PaymentLinkButton.verify|verify} messages.
+                 * @param message PaymentLinkButton message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: proto.Message.PaymentLinkMetadata.IPaymentLinkButton, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified PaymentLinkButton message, length delimited. Does not implicitly {@link proto.Message.PaymentLinkMetadata.PaymentLinkButton.verify|verify} messages.
+                 * @param message PaymentLinkButton message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: proto.Message.PaymentLinkMetadata.IPaymentLinkButton, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a PaymentLinkButton message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns PaymentLinkButton
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.PaymentLinkMetadata.PaymentLinkButton;
+
+                /**
+                 * Decodes a PaymentLinkButton message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns PaymentLinkButton
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.PaymentLinkMetadata.PaymentLinkButton;
+
+                /**
+                 * Verifies a PaymentLinkButton message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a PaymentLinkButton message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns PaymentLinkButton
+                 */
+                public static fromObject(object: { [k: string]: any }): proto.Message.PaymentLinkMetadata.PaymentLinkButton;
+
+                /**
+                 * Creates a plain object from a PaymentLinkButton message. Also converts values to other types if specified.
+                 * @param message PaymentLinkButton
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: proto.Message.PaymentLinkMetadata.PaymentLinkButton, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this PaymentLinkButton to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for PaymentLinkButton
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a PaymentLinkHeader. */
+            interface IPaymentLinkHeader {
+
+                /** PaymentLinkHeader headerType */
+                headerType: proto.Message.PaymentLinkMetadata.PaymentLinkHeader.PaymentLinkHeaderType;
+            }
+
+            /** Represents a PaymentLinkHeader. */
+            class PaymentLinkHeader implements IPaymentLinkHeader {
+
+                /**
+                 * Constructs a new PaymentLinkHeader.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: proto.Message.PaymentLinkMetadata.IPaymentLinkHeader);
+
+                /** PaymentLinkHeader headerType. */
+                public headerType: proto.Message.PaymentLinkMetadata.PaymentLinkHeader.PaymentLinkHeaderType;
+
+                /**
+                 * Creates a new PaymentLinkHeader instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns PaymentLinkHeader instance
+                 */
+                public static create(properties?: proto.Message.PaymentLinkMetadata.IPaymentLinkHeader): proto.Message.PaymentLinkMetadata.PaymentLinkHeader;
+
+                /**
+                 * Encodes the specified PaymentLinkHeader message. Does not implicitly {@link proto.Message.PaymentLinkMetadata.PaymentLinkHeader.verify|verify} messages.
+                 * @param message PaymentLinkHeader message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: proto.Message.PaymentLinkMetadata.IPaymentLinkHeader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified PaymentLinkHeader message, length delimited. Does not implicitly {@link proto.Message.PaymentLinkMetadata.PaymentLinkHeader.verify|verify} messages.
+                 * @param message PaymentLinkHeader message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: proto.Message.PaymentLinkMetadata.IPaymentLinkHeader, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a PaymentLinkHeader message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns PaymentLinkHeader
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.PaymentLinkMetadata.PaymentLinkHeader;
+
+                /**
+                 * Decodes a PaymentLinkHeader message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns PaymentLinkHeader
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.PaymentLinkMetadata.PaymentLinkHeader;
+
+                /**
+                 * Verifies a PaymentLinkHeader message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a PaymentLinkHeader message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns PaymentLinkHeader
+                 */
+                public static fromObject(object: { [k: string]: any }): proto.Message.PaymentLinkMetadata.PaymentLinkHeader;
+
+                /**
+                 * Creates a plain object from a PaymentLinkHeader message. Also converts values to other types if specified.
+                 * @param message PaymentLinkHeader
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: proto.Message.PaymentLinkMetadata.PaymentLinkHeader, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this PaymentLinkHeader to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for PaymentLinkHeader
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            namespace PaymentLinkHeader {
+
+                /** PaymentLinkHeaderType enum. */
+                enum PaymentLinkHeaderType {
+                    LINK_PREVIEW = 0,
+                    ORDER = 1
+                }
             }
         }
 
@@ -33292,9 +33722,6 @@ export namespace proto {
 
             /** VideoMessage processedVideos */
             processedVideos?: (proto.IProcessedVideo[]|null);
-
-            /** VideoMessage externalShareFullVideoDurationInSeconds */
-            externalShareFullVideoDurationInSeconds?: (number|null);
         }
 
         /** Represents a VideoMessage. */
@@ -33383,9 +33810,6 @@ export namespace proto {
 
             /** VideoMessage processedVideos. */
             public processedVideos: proto.IProcessedVideo[];
-
-            /** VideoMessage externalShareFullVideoDurationInSeconds. */
-            public externalShareFullVideoDurationInSeconds?: (number|null);
 
             /**
              * Creates a new VideoMessage instance using the specified properties.
